@@ -8,22 +8,27 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "prebuild": "prebuild-install",
     "rebuild": "electron-rebuild",
     "preview": "vite preview",
     "electron:start": "electron .",
-    "build:production": "npx electron-packager . --icon=test.icns"
+    "build:production": "npx electron-packager . --icon=./build/condor_icon.icns",
+    "postinstall": "electron-builder install-app-deps"
   },
   "dependencies": {
-    "vue": "^3.2.25",
-    "better-sqlite3-with-prebuilds": "^7.4.3"
+    "better-sqlite3-with-prebuilds": "^7.4.3",
+    "sqlite3": "^5.0.8",
+    "vue": "^3.2.25"
   },
   "devDependencies": {
     "@electron/get": "^1.14.1",
     "@vitejs/plugin-vue": "^2.3.3",
     "bootstrap": "^5.1.3",
     "electron": "^19.0.6",
+    "electron-builder": "^23.1.0",
     "electron-packager": "^15.5.1",
     "electron-rebuild": "^3.2.7",
+    "prebuild-install": "^7.1.1",
     "vite": "^2.9.9"
   }
 }

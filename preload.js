@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", () => {
 //   }
 // })
 
-const { contextBridge } = require("electron")
+const { contextBridge } = require("electron");
 const testMgr = require("./models/testmgr");
 
 const getNames = () => {
